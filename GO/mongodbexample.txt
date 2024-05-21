@@ -1,0 +1,80 @@
+// package main
+
+// func main() {
+
+	// client := mongodb.ConnectToDB("mongodb://localhost:27017")
+	// defer mongodb.DisconnectFromDB(client)
+
+	// collection := mongodb.GetCollection(client, "tdb", "tcolle")
+
+	// t1.1
+	// mongodb.InsertOneDocument(collection, bson.D{{"name", "pi"}, {"value", 3.14159}})
+
+	// t1.2
+	// s1 := bson.D{{"name", "Alice"}, {"age", 20}}
+	// mongodb.InsertOneDocument(collection, s1)
+
+	// s2 := bson.D{{"name", "Bob"}, {"age", 21}}
+	// s3 := bson.D{{"name", "Cathy"}, {"age", 22}}
+	// students := []interface{}{s2, s3}
+	// mongodb.InsertManyDocuments(collection, students)
+
+	// t3
+	// mongodb.ListDatabases(client)
+	// mongodb.ListCollections(client, "tdb")
+	// mongodb.ListDocuments(collection, bson.D{})
+
+	// t4
+	// mongodb.ListDocuments(collection, bson.D{})
+	// fmt.Println()
+
+	// singleResult := mongodb.FindOneDocument(collection, bson.D{{"name", "Bob"}})
+	// var result bson.D
+	// err := singleResult.Decode(&result)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// fmt.Println(result)
+	// fmt.Println()
+
+	// cursor, err := mongodb.FindManyDocuments(collection, bson.D{{"name", "Alice"}})
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// defer cursor.Close(context.TODO())
+	// for cursor.Next(context.TODO()) {
+	// 	var result bson.D
+	// 	err := cursor.Decode(&result)
+	// 	if err != nil {
+	// 		panic(err)
+	// 	}
+	// 	fmt.Println(result)
+	// }
+	// fmt.Println()
+
+	// cursor, err = mongodb.FindManyDocuments(collection, bson.D{})
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// defer cursor.Close(context.TODO())
+	// for cursor.Next(context.TODO()) {
+	// 	var result bson.D
+	// 	err := cursor.Decode(&result)
+	// 	if err != nil {
+	// 		panic(err)
+	// 	}
+	// 	fmt.Println(result)
+	// }
+
+	// t5
+	// mongodb.UpdateOneDocument(collection, bson.D{{"name", "pi"}}, bson.D{{"$set", bson.D{{"value", 3.14}}}})
+	// mongodb.ListDocuments(collection, bson.D{})
+	// mongodb.UpdateManyDocuments(collection, bson.D{{"name", "Alice"}}, bson.D{{"$set", bson.D{{"age", 1}}}})
+	// mongodb.ListDocuments(collection, bson.D{})
+
+	// t last
+	// mongodb.DeleteOneDocument(collection, bson.D{{"name", "pi"}})
+	// mongodb.ListDocuments(collection, bson.D{})
+	// mongodb.DeleteManyDocuments(collection, bson.D{})
+	// mongodb.ListDocuments(collection, bson.D{})
+// }
