@@ -1,5 +1,7 @@
 package rsa
 
+// PKCS#1格式的RSA私钥
+
 import (
 	"bytes"
 	"crypto/cipher"
